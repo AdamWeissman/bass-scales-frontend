@@ -40,20 +40,20 @@ export class Scale {
     this._mode = mode;
   }
 
-  get rootChromaticInterval() {
+  get keyChromaticInterval() {
     const indexOfRoot = twelveToneScale.indexOf(this._root) - modeHalfSteps[this._mode];
     return [twelveToneScale.slice(indexOfRoot), twelveToneScale.slice(0,indexOfRoot)].flat()
   }
 
-  get parentScaleNotes(){
-    const rci = this.rootChromaticInterval;
-    return [rci[0], rci[2], rci[4], rci[5], rci[7], rci[9], rci[11]];
+  get keyNotes(){
+    const kci = this.keyChromaticInterval;
+    return [kci[0], kci[2], kci[4], kci[5], kci[7], kci[9], kci[11]];
   }
 
   get modeNotes() {
-    const psn = this.parentScaleNotes;
+    const key = this.keyNotes;
     const modeNumber = modes[this._mode];
-    return [psn.slice(modeNumber), psn.slice(0,modeNumber)].flat();
+    return [key.slice(modeNumber), key.slice(0,modeNumber)].flat();
   }
 
   get root(){
