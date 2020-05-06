@@ -1,38 +1,6 @@
-const twelveToneScale = [
-                          "B",
-                          "C", 
-                          "C#/Db",
-                          "D",
-                          "D#/Eb",
-                          "E",
-                          "F",
-                          "F#/Gb",
-                          "G",
-                          "G#/Ab",
-                          "A",
-                          "A#/Bb"
-                        ]
-const modes = {
-                "Ionian": 0,
-                "Dorian": 1,
-                "Phrygian": 2,
-                "Lydian": 3,
-                "Mixolydian": 4,
-                "Aeolian": 5,
-                "Locrian": 6
-              }
-
-const modeHalfSteps = {
-                        "Ionian": 0,
-                        "Dorian": 2,
-                        "Phrygian": 4,
-                        "Lydian": 5,
-                        "Mixolydian": 7,
-                        "Aeolian": 9,
-                        "Locrian": 11
-                      }
-
-// FIXME: add const modes = {"ionian": }
+const twelveToneScale = [ "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab", "A", "A#/Bb" ]
+const modes = { "Ionian": 0, "Dorian": 1, "Phrygian": 2, "Lydian": 3, "Mixolydian": 4, "Aeolian": 5, "Locrian": 6 }
+const modeHalfSteps = { "Ionian": 0, "Dorian": 2, "Phrygian": 4, "Lydian": 5, "Mixolydian": 7, "Aeolian": 9, "Locrian": 11 }
 
 export class Scale {
   constructor(root, mode){
