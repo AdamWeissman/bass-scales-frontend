@@ -40,11 +40,6 @@ export class Scale {
     this._mode = mode;
   }
 
-  // FIXME: rootChromaticInterval may need to take a note
-  // FIXME: parentScaleNotes returns the wrong value. It is currently always the Ionian of the note given.
-  // FIXME: modeNotes is correctly programmed, but has wrong interval because parentScaleNotes is currently wrong.
-  // FIXME: if rootChromaticInterval took a note, the modeNumber could be substracted to arrive at the parentChromaticScale which is what we need.
-
   get rootChromaticInterval() {
     const indexOfRoot = twelveToneScale.indexOf(this._root) - modeHalfSteps[this._mode];
     return [twelveToneScale.slice(indexOfRoot), twelveToneScale.slice(0,indexOfRoot)].flat()
