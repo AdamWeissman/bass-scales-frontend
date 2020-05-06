@@ -5,9 +5,10 @@ import { Scale } from './theory/scale.js';
   const myBass = new Bass(6);
   console.log(myBass.strings);
 
-  const myScale = new Scale("E", "Phrygian");
+  const myScale = new Scale("B", "Phrygian");
   console.log(myScale.root);
   console.log(myScale.mode);
   console.log(myScale.rootChromaticInterval);
+  console.log(myScale.parentScaleNotes)
   console.log(myScale.modeNotes)
 })()

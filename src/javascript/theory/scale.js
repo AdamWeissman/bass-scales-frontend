@@ -22,6 +22,16 @@ const modes = {
                 "Locrian": 6
               }
 
+const modeHalfSteps = {
+                        "Ionian": 0,
+                        "Dorian": 2,
+                        "Phrygian": 4,
+                        "Lydian": 5,
+                        "Mixolydian": 7,
+                        "Aeolian": 9,
+                        "Locrian": 11
+                      }
+
 // FIXME: add const modes = {"ionian": }
 
 export class Scale {
@@ -36,7 +46,7 @@ export class Scale {
   // FIXME: if rootChromaticInterval took a note, the modeNumber could be substracted to arrive at the parentChromaticScale which is what we need.
 
   get rootChromaticInterval() {
-    const indexOfRoot = twelveToneScale.indexOf(this._root);
+    const indexOfRoot = twelveToneScale.indexOf(this._root) - modeHalfSteps[this._mode];
     return [twelveToneScale.slice(indexOfRoot), twelveToneScale.slice(0,indexOfRoot)].flat()
   }
 
