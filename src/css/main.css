@@ -1,0 +1,15 @@
+body {
+  background-color: rgba(0,0,0,1);
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+#scales-banner{
+  position: fixed;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.scales-banner--text{
+}
