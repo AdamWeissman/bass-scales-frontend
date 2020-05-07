@@ -6,37 +6,44 @@ const modes = {
     "name": "Ionian",
     "altName": "Major",
     "scaleShift": 0,
+    "degreeName": "Tonic",
     "halfStepsFromKeyRoot": 0,
   },
   "II": {
     "name": "Dorian",
     "scaleShift": 1,
+    "degreeName": "Supertonic",
     "halfStepsFromKeyRoot": 2 
   },
   "III": {
     "name": "Phrygian",
     "scaleShift": 2,
+    "degreeName": "Mediant",
     "halfStepsFromKeyRoot": 4 
   },
   "IV": {
     "name": "Lydian",
     "scaleShift": 3,
+    "degreeName": "Subdominant",
     "halfStepsFromKeyRoot": 5
   },
   "V": {
     "name": "Mixolydian",
     "scaleShift": 4,
+    "degreeName": "Dominant",
     "halfStepsFromKeyRoot": 7 
   },
   "VI": {
     "name": "Aeolian",
     "altName": "Minor",
     "scaleShift": 5,
+    "degreeName": "Submediant",
     "halfStepsFromKeyRoot": 9 
   },
   "VII": {
     "name": "Locrian",
     "scaleShift": 6,
+    "degreeName": "Leading Tone",
     "halfStepsFromKeyRoot": 11 
   },
 }
