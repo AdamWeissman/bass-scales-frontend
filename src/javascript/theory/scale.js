@@ -1,10 +1,12 @@
-export const twelveToneScale = [ "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab", "A", "A#/Bb" ]
+const twelveToneScale = [ "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab", "A", "A#/Bb" ]
+const intervals = ["r", "m2", "M2", "m3", "M3", "P4", "TT", "P5", "m6", "M6", "m7", "M7"]
+
 const modes = {
   "I": {
     "name": "Ionian",
     "altName": "Major",
     "scaleShift": 0,
-    "halfStepsFromKeyRoot": 0 
+    "halfStepsFromKeyRoot": 0,
   },
   "II": {
     "name": "Dorian",
@@ -38,8 +40,6 @@ const modes = {
     "halfStepsFromKeyRoot": 11 
   },
 }
-// const modes_names = { "Ionian": 0, "Dorian": 1, "Phrygian": 2, "Lydian": 3, "Mixolydian": 4, "Aeolian": 5, "Locrian": 6 }
-// const modeHalfSteps = { "Ionian": 0, "Dorian": 2, "Phrygian": 4, "Lydian": 5, "Mixolydian": 7, "Aeolian": 9, "Locrian": 11 }
 
 export class Scale {
   constructor(root, mode="I"){
@@ -72,11 +72,25 @@ export class Scale {
     const kci = this.keyChromaticInterval;
     return [kci[0], kci[2], kci[4], kci[5], kci[7], kci[9], kci[11]];
   }
+  
+  get modeChromaticInterval() {
+    const indexOfRoot = twelveToneScale.indexOf(this._root);
+    return [twelveToneScale.slice(indexOfRoot), twelveToneScale.slice(0,indexOfRoot)].flat()
+  }
 
   get notes() {
     const key = this.parentKeyNotes;
     const modeNumber = this.scaleShift;
     return [key.slice(modeNumber), key.slice(0,modeNumber)].flat();
+  }
+
+  get intervals(){
+    const interval = [];
+    for(const note of this.notes){
+      let indexOfNote = this.modeChromaticInterval.indexOf(note);
+      interval.push(intervals[indexOfNote]);
+    }
+    return interval;
   }
 
   get modeInfo(){
