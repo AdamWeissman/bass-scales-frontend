@@ -1,10 +1,16 @@
 import { Bass } from './instruments/bass.js';
-import { Scale } from './theory/scale.js';
+import { Scale, twelveToneScale } from './theory/scale.js';
 
 (() => {
   // Test Scales
-  let myScale = new Scale("E", "Phrygian");
-  console.log(myScale.root);
-  console.log(myScale.keyNotes);
-  console.log(myScale.modeNotes);
+  for(const tone of twelveToneScale){
+    let myScale = new Scale(tone, "VII");
+    console.log(myScale.modeInfo);
+    console.log(myScale.parentKeyNotes);
+    console.log(myScale.notes);
+  }
+  const another_scale = new Scale("G", "III");
+  console.log(another_scale.parentKeyNotes);
+  console.log(another_scale.notes);
 })()
+
