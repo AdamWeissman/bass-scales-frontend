@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: rgba(0,0,0,1);
   font-family: Arial, Helvetica, sans-serif;
@@ -12,4 +17,22 @@ body {
 }
 
 .scales-banner--text{
+  font-size: 9em;
+  color: rgba(102,204,255,1);
+  text-shadow: 5px 5px rgba(255,77,196,1);
+  filter: blur(2px);
+}
+
+.scales-banner--text-shift{
+  font-size: 9em;
+  color: rgba(255,255,255,1);
+  /*
+  color: black;
+  text-shadow: -1px 1px rgba(102,204,255,1), 0 1px white, 1px 0 rgba(255,77,196,1), 0 -2px rgba(102,204,255,1);
+  */
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-51%, -53%);
+  z-index: 20;
 }
