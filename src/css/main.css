@@ -14,14 +14,16 @@ body {
 }
 
 #scales-banner{
+  font-size: 7em;
   position: fixed;
   top:50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation-name: scale-up;
+  animation: scale-up 3.5s both;
 }
 
 .scales-banner--text{
-  font-size: 12em;
   letter-spacing: 0.08em;
   color: rgba(0,255,255,1);
   text-shadow: 6px 6px 4px rgba(255,0,255,1);
@@ -32,10 +34,16 @@ body {
   position: absolute;
   top:50%;
   left: 50%;
-  font-size: 12em;
   letter-spacing: 0.08em;
   color: rgba(255,255,0,1);
   text-shadow: 7px 5px 3px rgba(0,0,0,1);
   transform: translate(-52%, -54.8%);
   z-index: 2;
+}
+
+@keyframes scale-up {
+  0% {font-size: 0.1em; opacity: 100%}
+  40% {font-size: 7em; opacity: 100%}
+  90% {font-size: 7em; opacity: 100%}
+  100% {font-size: 7em; opacity: 0%}
 }
