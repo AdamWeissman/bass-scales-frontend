@@ -47,3 +47,27 @@ body {
   90% {font-size: 7em; opacity: 100%}
   100% {font-size: 7em; opacity: 0%}
 }
+
+#scales-logo{
+  font-size: 2.5em;
+}
+
+.scales-logo--text{
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  letter-spacing: 0.08em;
+  color: rgba(0,255,255,1);
+  text-shadow: 2px 2px 4px rgba(255,0,255,1);
+  filter: blur(1px);
+}
+
+.scales-logo--text-shift{
+  position: absolute;
+  top:15px;
+  left: 15px;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,0,1);
+  text-shadow: 3px 2px 3px rgba(0,0,0,1);
+  z-index: 2;
+}
