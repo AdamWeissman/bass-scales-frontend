@@ -1,5 +1,7 @@
-import { Bass } from './instruments/bass.js';
-import { Scale } from './theory/scale.js';
+import { Bass } from './Bass.js';
+import { Scale } from './Scale.js';
+import { Adapter } from "./Adapter.js";
+import { Display } from "./Display.js";
 
 (() => {
   // Test Scales
