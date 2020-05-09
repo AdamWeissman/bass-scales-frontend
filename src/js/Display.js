@@ -31,7 +31,12 @@ export class Display {
   static noteCard(note){
     const noteCard = document.createElement("div");
     noteCard.classList.add("scale-card--note-card");
-    noteCard.innerText = note;
+
+    const noteText = document.createElement("span");
+    noteText.classList.add("scale-card--note-text");
+
+    noteText.innerText = note;
+    noteCard.appendChild(noteText);
 
     return noteCard;
   }
