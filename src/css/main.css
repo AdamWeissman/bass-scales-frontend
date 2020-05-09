@@ -21,16 +21,18 @@ nav{
   height: 97px;
 }
 main{
-  top: 100px;
-  margin: 15px;
-  width: 950px;
+  margin: 0;
+  margin-left: 1rem;
+  max-width: 950px;
+  min-height: 75vh;
+  max-height: 75vh;
   position: fixed;
   height: 100%;
   overflow: auto;
 }
 
 aside{
-  margin-left: 1000px;
+  margin-left: 975px;
   min-height: 70vh;
   max-height: 70vh;
   background-color: rgba(0,0,0,1);
@@ -135,7 +137,7 @@ aside{
 .scale-card--notes{
   display: grid;
   max-width: 950px;
-  grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(115px, 1fr));
   grid-gap: 1rem;
 }
 
