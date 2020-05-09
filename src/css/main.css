@@ -3,24 +3,37 @@
   src: url("../fonts/Squada_One/SquadaOne-Regular.ttf") format("truetype");
 }
 
+*{
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: rgba(0,0,0,1);
   font-family: 'Squada One', Arial, Helvetica;
   color: white;
   margin: 0 4rem;
+  height: 100%;
 }
 
+nav{
+  width: 100%;
+  height: 97px;
+}
 main{
+  top: 100px;
   margin: 15px;
+  width: 950px;
+  position: fixed;
   height: 100%;
+  overflow: auto;
 }
 
-/*
 aside{
-  height: 100%;
+  margin-left: 1000px;
+  height: 80vh;
   background-color: white;
 }
-*/
 
 #scales-banner{
   font-size: 7em;
@@ -114,7 +127,8 @@ aside{
 
 .scale-card--notes{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(115px, 1fr));
+  max-width: 950px;
+  grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
   grid-gap: 1rem;
 }
 
