@@ -105,13 +105,15 @@ body {
 }
 
 .scale-card--notes > div {
-  background: rgba(0,255,255,1);
+  /* background: rgba(0,255,255,1); */
+  background: rgba(0,0,0,1);
   display: grid;
   place-items: center;
+  box-shadow: 0 0 7px rgba(255,0,255, 1);
   border-style: solid;
-  border-width: 3px;
-  border-color: rgba(0,0,0,0.5);
-  box-shadow: 0 0 6px rgba(35, 173, 278, 1);
+  border-width: 2px;
+  border-color: rgba(255,0,255,0.8);
+  border-radius: 7px;
 }
 
 .scale-card--notes > div::before {
@@ -126,5 +128,5 @@ body {
   color: rgba(255,255,0,1);
   width: 100%;
   grid-area: 1 / 1 / 2 / 2;
-  text-shadow: 3px 2px 6px rgba(0,0,0,1), -1px -1px 6px rgba(0,0,0,0.5);
+  /* text-shadow: 3px 2px 6px rgba(0,0,0,1), -1px -1px 6px rgba(0,0,0,0.5); */
 }
