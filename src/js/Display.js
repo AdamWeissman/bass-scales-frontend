@@ -22,4 +22,28 @@ export class Display {
       <h1 class="scales-logo--text-shift">SCALES</h1>
     `;
   }
+
+  static scaleCard(scale){
+    const scaleCard = document.getElementById("scale-card");
+    Display.scaleNotes(scaleCard, scale);
+  }
+
+  static noteCard(note){
+    const noteCard = document.createElement("div");
+    noteCard.classList.add("scale-card--note-card");
+    noteCard.innerText = note;
+
+    return noteCard;
+  }
+
+  static scaleNotes(scaleCard, scale){
+    const scaleCardNotes = document.createElement('div');
+    scaleCardNotes.classList.add("scale-card--notes");
+
+    scale.notes.map( note => {
+      scaleCardNotes.appendChild(Display.noteCard(note));
+    });
+
+    scaleCard.appendChild(scaleCardNotes);
+  }
 }
