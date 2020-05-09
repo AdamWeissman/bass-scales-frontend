@@ -86,3 +86,14 @@ body {
   90% { opacity: 0%; font-size: 0.1em;}
   100% { opacity: 100%; font-size: 3em;}
 }
+
+#scale-card{
+  animation-name: show-scale-card;
+  animation: show-scale-card 3.5s both;
+}
+
+@keyframes show-scale-card {
+  0% { opacity: 0%;}
+  90% { opacity: 0%; font-size: 0.1em;}
+  100% { opacity: 100%; font-size: 3em;}
+}
