@@ -7,3 +7,7 @@ const scale = new Scale("A", "III");
 
 Display.load();
 Display.scaleCard(scale);
+setTimeout( () => {
+  const scale1 = new Scale("B", "III");
+  Display.scaleCard(scale1);
+}, 5000)

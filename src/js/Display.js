@@ -37,6 +37,7 @@ export class Display {
   }
 
   static scaleNotes(scaleCard, scale){
+    Display.removeElements(".scale-card--notes");
     const scaleCardNotes = document.createElement('div');
     scaleCardNotes.classList.add("scale-card--notes");
 
@@ -45,5 +46,9 @@ export class Display {
     });
 
     scaleCard.appendChild(scaleCardNotes);
+  }
+
+  static removeElements(classOrId){
+    document.querySelectorAll(classOrId).forEach(e => e.parentNode.removeChild(e));
   }
 }
