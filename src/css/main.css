@@ -20,6 +20,7 @@ nav{
   width: 100%;
   height: 97px;
 }
+
 main{
   margin: 0;
   margin-left: 1rem;
@@ -42,6 +43,19 @@ aside{
   border-color: rgba(255,0,255,0.8);
   border-radius: 7px;
   padding: 20px;
+}
+
+#scale-name{
+  width: 100%;
+  font-size: 2.5rem;
+  color: rgba(0,255,255,1);
+  text-shadow: 2px 2px rgba(50,50,50,1);
+}
+
+#scale-name--text{
+  text-align: right;
+  margin: 10px;
+  letter-spacing: 0.08rem;
 }
 
 #scales-banner{
@@ -126,6 +140,7 @@ aside{
 #scale-card{
   animation-name: show-scale-card;
   animation: show-scale-card 3.5s both;
+  margin-bottom: 1.5rem;
 }
 
 @keyframes show-scale-card {
