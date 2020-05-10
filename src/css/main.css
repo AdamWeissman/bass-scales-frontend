@@ -79,6 +79,13 @@ select{
   letter-spacing: 0.08rem;
 }
 
+#scale-input-card {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+
+}
+
 #scales-banner{
   font-size: 7em;
   position: fixed;
