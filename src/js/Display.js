@@ -59,10 +59,18 @@ export class Display {
     document.querySelectorAll(classOrId).forEach(e => e.parentNode.removeChild(e));
   }
 
-  static addRootNoteEventListener(rootNoteSelected,modeSelected){
+  static addRootNoteEventListener(rootNoteSelected, modeSelected){
     rootNoteSelected.addEventListener('change', (e) => {
       // instead of e.target.value, could also use rootNoteSelected.value
       const scale = new Scale(e.target.value, modeSelected.value);
+      Display.scaleCard(scale);
+    });
+  }
+
+  static addModeEventListener(rootNoteSelected, modeSelected){
+    modeSelected.addEventListener('change', (e) => {
+      // instead of e.target.value, could also use modeSelected.value
+      const scale = new Scale(rootNoteSelected.value, e.target.value);
       Display.scaleCard(scale);
     });
   }
