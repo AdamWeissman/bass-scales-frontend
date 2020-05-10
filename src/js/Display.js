@@ -1,3 +1,5 @@
+import { Scale } from './Scale.js';
+
 export class Display {
 
   static load() {
@@ -55,5 +57,13 @@ export class Display {
 
   static removeElements(classOrId){
     document.querySelectorAll(classOrId).forEach(e => e.parentNode.removeChild(e));
+  }
+
+  static addRootNoteEventListener(rootNoteSelected,modeSelected){
+    rootNoteSelected.addEventListener('change', (e) => {
+      // instead of e.target.value, could also use rootNoteSelected.value
+      const scale = new Scale(e.target.value, modeSelected.value);
+      Display.scaleCard(scale);
+    });
   }
 }
