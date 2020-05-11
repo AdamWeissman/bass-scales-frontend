@@ -81,10 +81,12 @@ select{
 
 #scale-input-card {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content:center;
   align-items: start;
+}
 
+#scale-input-card > h2 {
+  padding-right: 10px;
 }
 
 #scales-banner{
