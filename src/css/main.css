@@ -43,11 +43,24 @@ main{
   max-height: 75vh;
   position: fixed;
   height: 100%;
-  overflow: auto;
+  overflow: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+#comments-card {
+  min-height: 52.7vh;
+  max-height: 52.7vh;
+  background-color: rgba(0,0,0,1);
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgba(255,0,255,0.8);
+  border-radius: 7px;
+  padding: 20px;
 }
 
 aside{
-  margin-left: 975px;
+  margin-left: 950px;
   min-height: 70vh;
   max-height: 70vh;
   background-color: rgba(0,0,0,1);
@@ -98,6 +111,7 @@ select{
   animation-name: scale-up;
   animation: scale-up 3.5s both;
   font-family: 'Squada One', Arial, Helvetica;
+  z-index: 20;
 }
 
 .scales-banner--text{
