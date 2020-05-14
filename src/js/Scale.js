@@ -70,6 +70,10 @@ export class Scale {
     return this.modeHash.name;
   }
 
+  get dbIndex(){
+    return (Object.keys(modes).length * twelveToneScale.indexOf(this._root) + this.scaleShift + 1)
+  }
+
   get keyChromaticInterval() {
     const indexOfRoot = twelveToneScale.indexOf(this._root) - this.halfStepsFromKeyRoot;
     return [twelveToneScale.slice(indexOfRoot), twelveToneScale.slice(0,indexOfRoot)].flat()
