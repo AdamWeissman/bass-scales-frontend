@@ -3,7 +3,7 @@ import { Scale } from './Scale.js';
 import { Adapter } from "./Adapter.js";
 import { Display } from "./Display.js";
 
-const scale = new Scale("A", "III");
+const scale = new Scale("A");
 const modeSelected = document.getElementById("scale-root-mode");
 const rootNoteSelected = document.getElementById("scale-root-note");
 
