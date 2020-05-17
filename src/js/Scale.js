@@ -54,6 +54,14 @@ export class Scale {
     this._mode = mode;
   }
 
+  set root(root){
+    this._root = root;
+  }
+
+  set mode(mode){
+    this._mode = mode;
+  }
+
   get modeHash(){
     return modes[this._mode];
   }
