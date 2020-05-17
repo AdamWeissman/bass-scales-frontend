@@ -84,4 +84,12 @@ export class Display {
       this.scaleCard;
     });
   }
+
+  get scale_feelings(){
+    const endpoint = `/scales/${this.scale.dbIndex}`;
+    this.adapter.get(endpoint)
+      .then(json => {
+        console.log(json);
+      });
+  }
 }
