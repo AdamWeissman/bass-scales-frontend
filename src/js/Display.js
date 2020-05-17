@@ -89,7 +89,7 @@ export class Display {
     const endpoint = `/scales/${this.scale.dbIndex}`;
     this.adapter.get(endpoint)
       .then(json => {
-        console.log(json);
+        console.table(json.data.top_feelings);
       });
   }
 }
