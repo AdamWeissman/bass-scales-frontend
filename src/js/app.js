@@ -6,9 +6,9 @@ import { Display } from "./Display.js";
 const scale = new Scale("A");
 const modeSelected = document.getElementById("scale-root-mode");
 const rootNoteSelected = document.getElementById("scale-root-note");
-const display = new Display("adapter");
+
+const adapter = new Adapter("http://localhost:3000/api/v0");
+const display = new Display(adapter, scale);
 
 display.load;
-display.scaleCard(scale);
-display.addRootNoteEventListener(rootNoteSelected,modeSelected);
-display.addModeEventListener(rootNoteSelected, modeSelected);
+display.addEventListeners(rootNoteSelected, modeSelected);

@@ -1,15 +1,20 @@
-import { Scale } from './Scale.js';
-
 export class Display {
-  constructor(adapter){
-    this.adapter = adapter
+  constructor(adapter, scale){
+    this.adapter = adapter;
+    this.scale = scale;
   }
 
   get load() {
     window.addEventListener('DOMContentLoaded', (e) => {
       this.banner;
       this.logo;
+      this.scaleCard;
     });
+  }
+
+  addEventListeners(rootNoteSelected, modeSelected){
+    this.addRootNoteEventListener(rootNoteSelected, modeSelected);
+    this.addModeEventListener(rootNoteSelected, modeSelected);
   }
 
   get banner() {
@@ -28,9 +33,9 @@ export class Display {
     `;
   }
 
-  scaleCard(scale){
+  get scaleCard(){
     const scaleCard = document.getElementById("scale-card");
-    this.scaleNotes(scaleCard, scale);
+    this.scaleNotes(scaleCard);
   }
 
   noteCard(note){
@@ -46,12 +51,12 @@ export class Display {
     return noteCard;
   }
 
-  scaleNotes(scaleCard, scale){
+  scaleNotes(scaleCard){
     this.removeElements(".scale-card--notes");
     const scaleCardNotes = document.createElement('div');
     scaleCardNotes.classList.add("scale-card--notes");
 
-    scale.notes.map( note => {
+    this.scale.notes.map( note => {
       scaleCardNotes.appendChild(this.noteCard(note));
     });
 
@@ -65,16 +70,18 @@ export class Display {
   addRootNoteEventListener(rootNoteSelected, modeSelected){
     rootNoteSelected.addEventListener('change', (e) => {
       // instead of e.target.value, could also use rootNoteSelected.value
-      const scale = new Scale(e.target.value, modeSelected.value);
-      this.scaleCard(scale);
+      this.scale.root = e.target.value;
+      this.scale.mode = modeSelected.value;
+      this.scaleCard;
     });
   }
 
   addModeEventListener(rootNoteSelected, modeSelected){
     modeSelected.addEventListener('change', (e) => {
       // instead of e.target.value, could also use modeSelected.value
-      const scale = new Scale(rootNoteSelected.value, e.target.value);
-      this.scaleCard(scale);
+      this.scale.root = rootNoteSelected.value;
+      this.scale.mode = e.target.value;
+      this.scaleCard;
     });
   }
 }
