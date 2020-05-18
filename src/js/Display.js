@@ -9,6 +9,7 @@ export class Display {
       this.banner;
       this.logo;
       this.scaleCard;
+      this.scaleFeelings;
     });
   }
 
@@ -73,6 +74,7 @@ export class Display {
       this.scale.root = e.target.value;
       this.scale.mode = modeSelected.value;
       this.scaleCard;
+      this.scaleFeelings;
     });
   }
 
@@ -82,10 +84,12 @@ export class Display {
       this.scale.root = rootNoteSelected.value;
       this.scale.mode = e.target.value;
       this.scaleCard;
+      this.scaleFeelings;
     });
   }
 
-  static buildScaleFeelings(feelings){
+  buildScaleFeelings(feelings){
+    this.removeElements("#feelings-show-card div")
     const feelingsShowCard = document.getElementById("feelings-show-card");
 
     for(const feeling of feelings){
@@ -102,7 +106,7 @@ export class Display {
     const endpoint = `/scales/${this.scale.dbIndex}`;
     this.adapter.get(endpoint)
       .then(json => {
-        Display.buildScaleFeelings(json.data.top_feelings);
+        this.buildScaleFeelings(json.data.top_feelings);
       });
   }
 }
