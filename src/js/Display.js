@@ -109,4 +109,16 @@ export class Display {
         this.buildScaleFeelings(json.data.top_feelings);
       });
   }
+
+  get createScaleFeeling(){
+    const endpoint = `/scales/${this.scale.dbIndex}/feelings`;
+    const scale_id = this.scale.dbIndex;
+    const feelingAdjective = "Weirdness";
+    const data = {"scale_id": scale_id, "feeling_adjective": feelingAdjective};
+
+    this.adapter.post(endpoint, data)
+      .then(json => {
+        console.log(json);
+      });
+  }
 }
