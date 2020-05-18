@@ -2,6 +2,8 @@ export class Display {
   constructor(adapter, scale){
     this.adapter = adapter;
     this.scale = scale;
+    this.modeSelected = document.getElementById("scale-root-mode");
+    this.rootNoteSelected = document.getElementById("scale-root-note");
   }
 
   get load() {
@@ -13,9 +15,9 @@ export class Display {
     });
   }
 
-  addEventListeners(rootNoteSelected, modeSelected){
-    this.addRootNoteEventListener(rootNoteSelected, modeSelected);
-    this.addModeEventListener(rootNoteSelected, modeSelected);
+  get addEventListeners() {
+    this.addRootNoteEventListener;
+    this.addModeEventListener;
   }
 
   get banner() {
@@ -73,19 +75,19 @@ export class Display {
     this.scaleFeelings;
   }
 
-  addRootNoteEventListener(rootNoteSelected, modeSelected){
-    rootNoteSelected.addEventListener('change', (e) => {
-      // instead of e.target.value, could also use rootNoteSelected.value
+  get addRootNoteEventListener(){
+    this.rootNoteSelected.addEventListener('change', (e) => {
+      // instead of e.target.value, could also use this.rootNoteSelected.value
       this.scale.root = e.target.value;
-      this.scale.mode = modeSelected.value;
+      this.scale.mode = this.modeSelected.value;
       this.updateView;
     });
   }
 
-  addModeEventListener(rootNoteSelected, modeSelected){
-    modeSelected.addEventListener('change', (e) => {
-      // instead of e.target.value, could also use modeSelected.value
-      this.scale.root = rootNoteSelected.value;
+  get addModeEventListener(){
+    this.modeSelected.addEventListener('change', (e) => {
+      // instead of e.target.value, could also use this.modeSelected.value
+      this.scale.root = this.rootNoteSelected.value;
       this.scale.mode = e.target.value;
       this.updateView;
     });
