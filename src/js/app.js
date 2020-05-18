@@ -13,4 +13,4 @@ const display = new Display(adapter, scale);
 display.load;
 display.addEventListeners(rootNoteSelected, modeSelected);
 
-display.scale_feelings;
+display.scaleFeelings;

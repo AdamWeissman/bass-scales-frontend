@@ -85,11 +85,24 @@ export class Display {
     });
   }
 
-  get scale_feelings(){
+  static buildScaleFeelings(feelings){
+    const feelingsShowCard = document.getElementById("feelings-show-card");
+
+    for(const feeling of feelings){
+      const feelingDiv = document.createElement('div');
+      feelingDiv.innerHTML = `
+        <span>${feeling.adjective}</span>
+        <span>${feeling.count}</span>
+      `;
+      feelingsShowCard.appendChild(feelingDiv);
+    }
+  }
+
+  get scaleFeelings(){
     const endpoint = `/scales/${this.scale.dbIndex}`;
     this.adapter.get(endpoint)
       .then(json => {
-        console.table(json.data.top_feelings);
+        Display.buildScaleFeelings(json.data.top_feelings);
       });
   }
 }
