@@ -12,4 +12,4 @@ const display = new Display(adapter, scale);
 
 display.load;
 display.addEventListeners(rootNoteSelected, modeSelected);
-display.createScaleFeeling;
+// display.createScaleFeeling;

@@ -68,13 +68,17 @@ export class Display {
     document.querySelectorAll(classOrId).forEach(e => e.parentNode.removeChild(e));
   }
 
+  get updateView(){
+    this.scaleCard;
+    this.scaleFeelings;
+  }
+
   addRootNoteEventListener(rootNoteSelected, modeSelected){
     rootNoteSelected.addEventListener('change', (e) => {
       // instead of e.target.value, could also use rootNoteSelected.value
       this.scale.root = e.target.value;
       this.scale.mode = modeSelected.value;
-      this.scaleCard;
-      this.scaleFeelings;
+      this.updateView;
     });
   }
 
@@ -83,8 +87,7 @@ export class Display {
       // instead of e.target.value, could also use modeSelected.value
       this.scale.root = rootNoteSelected.value;
       this.scale.mode = e.target.value;
-      this.scaleCard;
-      this.scaleFeelings;
+      this.updateView;
     });
   }
 
