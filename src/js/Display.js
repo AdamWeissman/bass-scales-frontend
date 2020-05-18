@@ -18,6 +18,7 @@ export class Display {
   get addEventListeners() {
     this.addRootNoteEventListener;
     this.addModeEventListener;
+    this.addFeelingListener;
   }
 
   get banner() {
@@ -115,15 +116,24 @@ export class Display {
       });
   }
 
-  get createScaleFeeling(){
+  get addFeelingListener(){
+    const feelingInput = document.querySelector("#feeling-input-form");
+    feelingInput.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const feelingAdjective = feelingInput.querySelector("#adjective").value;
+      this.createScaleFeeling(feelingAdjective);
+    }, false);
+  }
+
+  createScaleFeeling(feelingAdjective){
     const endpoint = `/scales/${this.scale.dbIndex}/feelings`;
     const scale_id = this.scale.dbIndex;
-    const feelingAdjective = "Weirdness";
     const data = {"scale_id": scale_id, "feeling_adjective": feelingAdjective};
 
     this.adapter.post(endpoint, data)
       .then(json => {
         console.log(json);
+        this.scaleFeelings;
       });
   }
 }
