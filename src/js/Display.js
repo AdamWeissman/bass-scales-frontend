@@ -8,7 +8,7 @@ export class Display {
 
   get load() {
     window.addEventListener('DOMContentLoaded', (e) => {
-      this.banner;
+      // this.banner;
       this.logo;
       this.scaleCard;
       this.scaleFeelings;
@@ -24,16 +24,14 @@ export class Display {
   get banner() {
     const scalesBanner = document.getElementById("scales-banner");
     scalesBanner.innerHTML = `
-      <h1 class="scales-banner--text">SCALES</h1>
-      <h1 class="scales-banner--text-shift">SCALES</h1>
+      <img src="src/img/scales.png" alt="SCALES">
     `;
   }
 
   get logo(){
     const scalesLogo = document.getElementById("scales-logo");
     scalesLogo.innerHTML = `
-      <h1 class="scales-logo--text">SCALES</h1>
-      <h1 class="scales-logo--text-shift">SCALES</h1>
+      <img src="src/img/scales.png" alt="SCALES">
     `;
   }
 

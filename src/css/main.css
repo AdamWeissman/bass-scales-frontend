@@ -4,11 +4,6 @@
 }
 
 @font-face {
-  font-family: "Varela Round";
-  src: url("../fonts/Varela_Round/VarelaRound-Regular.ttf") format("truetype");
-}
-
-@font-face {
   font-family: "Titillium Web";
   src: url("../fonts/Titillium_Web/TitilliumWeb-Regular.ttf") format("truetype");
 }
@@ -20,10 +15,6 @@
 
 body {
   background-color: rgba(0,0,0,1);
-  /*
-  font-family: 'Varela Round', sans-serif;
-  font-family: 'Squada One', Arial, Helvetica;
-   */
   font-family: 'Titillium Web', sans-serif;
   color: white;
   margin: 0 4rem;
@@ -31,45 +22,15 @@ body {
 }
 
 nav{
-  width: 100%;
-  height: 97px;
 }
 
 main{
-  margin: 0;
-  margin-left: 1rem;
-  max-width: 950px;
-  min-height: 75vh;
-  max-height: 75vh;
-  position: fixed;
-  height: 100%;
-  overflow: none;
-  padding-bottom: 0;
-  margin-bottom: 0;
 }
 
 #feelings-card {
-  min-height: 52.7vh;
-  max-height: 52.7vh;
-  background-color: rgba(0,0,0,1);
-  border-style: solid;
-  border-width: 2px;
-  border-color: rgba(255,0,255,0.8);
-  border-radius: 7px;
-  padding: 20px;
 }
 
 aside{
-  margin-left: 950px;
-  min-height: 70vh;
-  max-height: 70vh;
-  background-color: rgba(0,0,0,1);
-  display: grid;
-  border-style: solid;
-  border-width: 2px;
-  border-color: rgba(255,0,255,0.8);
-  border-radius: 7px;
-  padding: 20px;
 }
 
 select{
@@ -87,55 +48,14 @@ select{
 }
 
 #scale-name--text{
-  text-align: right;
-  margin: 10px;
-  letter-spacing: 0.08rem;
 }
 
 #scale-input-card {
-  display: flex;
-  justify-content:center;
-  align-items: start;
-}
-
-#scale-input-card > h2 {
-  padding-right: 10px;
 }
 
 #scales-banner{
-  font-size: 7em;
-  position: fixed;
-  top:50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation-name: scale-up;
-  animation: scale-up 3.5s both;
-  font-family: 'Squada One', Arial, Helvetica;
-  z-index: 20;
 }
 
-.scales-banner--text{
-  letter-spacing: 0.08em;
-  color: rgba(0,255,255,1);
-  text-shadow: 6px 6px 4px rgba(255,0,255,1);
-  filter: blur(1px);
-}
-
-.scales-banner--text-shift{
-  position: absolute;
-  top:50%;
-  left: 50%;
-  letter-spacing: 0.08em;
-  color: rgba(255,255,0,1);
-  text-shadow: 7px 5px 3px rgba(0,0,0,1);
-  transform: translate(-52%, -54.8%);
-  z-index: 2;
-}
-
-#scales-banner h1 {
-  margin: 0;
-  padding: 0;
-}
 
 @keyframes scale-up {
   0% {font-size: 0.1em; opacity: 100%}
@@ -145,37 +65,6 @@ select{
 }
 
 #scales-logo{
-  font-size: 3em;
-  animation-name: show-logo;
-  animation: show-logo 3.5s both;
-  font-family: 'Squada One', Arial, Helvetica;
-}
-
-.scales-logo--text{
-  position: relative;
-  margin-top: 18px;
-  margin-left: 11px;
-  letter-spacing: 0.08em;
-  color: rgba(0,255,255,1);
-  text-shadow: 2px 2px 4px rgba(255,0,255,1);
-  filter: blur(1px);
-}
-
-.scales-logo--text-shift{
-  position: absolute;
-  top:14px;
-  left: 14px;
-  letter-spacing: 0.08em;
-  color: rgba(255,255,0,1);
-  text-shadow: 4px 3px 3px rgba(0,0,0,1);
-  z-index: 2;
-}
-
-
-.scales-logo--text-shift {
-  margin-top: 0;
-  margin-left: 3.5rem;
-  padding: 0;
 }
 
 @keyframes show-logo {
@@ -186,7 +75,7 @@ select{
 
 #scale-card{
   animation-name: show-scale-card;
-  animation: show-scale-card 3.5s both;
+  animation: show-scale-card 0s both;
   margin-bottom: 1.5rem;
   font-family: 'Squada One', Arial, Helvetica;
 }
