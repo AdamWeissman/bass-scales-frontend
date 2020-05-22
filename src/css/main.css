@@ -17,11 +17,14 @@ body {
   background-color: rgba(0,0,0,1);
   font-family: 'Titillium Web', sans-serif;
   color: white;
-  margin: 0 4rem;
+  margin: 2rem 3rem;
   height: 100%;
 }
 
-nav{
+nav #scales-logo > img {
+  height: 5vw;
+  width: auto;
+  margin-bottom: 2vw;
 }
 
 main{
@@ -89,7 +92,7 @@ select{
 .scale-card--notes{
   display: grid;
   max-width: 950px;
-  grid-template-columns: repeat(auto-fill, minmax(115px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   grid-gap: 1rem;
 }
 
@@ -126,4 +129,20 @@ select{
 .scale-card--note-card:hover{
   background-image: radial-gradient(circle, black, rgba(255,0,255,0.6));
   box-shadow: 0 0 7px rgba(255,0,255, 1);
+}
+
+@media screen and (orientation:portrait) {
+  nav #scales-logo > img {
+    height: 9vw;
+    width: auto;
+  }
+  .scale-card--notes{
+    display: grid;
+    max-width: 950px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1rem;
+  }
+}
+
+@media screen and (orientation:landscape) {
 }
