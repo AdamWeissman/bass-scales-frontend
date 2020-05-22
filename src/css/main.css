@@ -27,6 +27,12 @@ nav #scales-logo > img {
   margin-bottom: 2vw;
 }
 
+#input-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 main{
 }
 
@@ -45,7 +51,7 @@ select{
 
 #scale-name{
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 7.5rem;
   color: rgba(0,255,255,1);
   text-shadow: 2px 2px rgba(50,50,50,1);
 }
@@ -91,6 +97,7 @@ select{
 
 .scale-card--notes{
   display: flex;
+  justify-content: space-between;
 }
 
 .scale-card--notes > div {
@@ -101,7 +108,6 @@ select{
   border-radius: 7px;
   width: calc(80vw / 7 - 5px);
   height: calc(80vw / 7 - 10px);
-  margin: 10px;
 }
 
 .scale-card--notes > div > span {
@@ -137,7 +143,24 @@ select{
     height: calc(80vh / 7 - 1vh);
     margin: 1vh 0;
   }
+
+  #main-block{
+    display: flex;
+  }
+
 }
 
 @media screen and (orientation:landscape) {
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    margin: 2rem 15vw;
+  }
+
+  .scale-card--notes > div {
+    width: calc(70vw / 7 - 2vh);
+    height: calc(70vw / 7 - 2vh);
+    margin: 2vw 0;
+  }
 }
