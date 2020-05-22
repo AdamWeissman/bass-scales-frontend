@@ -14,50 +14,52 @@
 
   <article id="main-block">
     <section id="scale-card"></section>
-    <main>
-      <section id="feelings-card">
-        <section id="feeling-input-card">
+    <section id="input-cards">
+      <main>
+        <section id="feelings-card">
+          <section id="feeling-input-card">
 
-          <form id="feeling-input-form">
-            <label for="adjective">What does this scale make you feel?</label>
-            <input type="text" id="adjective" name="adjective">
-            <input type="submit" type="submit" value="Vote">
-          </form>
+            <form id="feeling-input-form">
+              <label for="adjective">What does this scale make you feel?</label>
+              <input type="text" id="adjective" name="adjective">
+              <input type="submit" type="submit" value="Vote">
+            </form>
+          </section>
+
+          <section id="feelings-show-card"></section>
         </section>
+      </main>
 
-        <section id="feelings-show-card"></section>
-      </section>
-    </main>
+      <aside>
+        <section id="scale-input-card">
+          <h2>Root & Mode:</h2>
+          <select id="scale-root-note" name="scale-root-note">
+            <option value="A">A</option>
+            <option value="A#/Bb">A#/Bb</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="C#/Db">C#/Db</option>
+            <option value="D">D</option>
+            <option value="D#/Eb">D#/Eb</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="F#/Gb">F#/Gb</option>
+            <option value="G">G</option>
+            <option value="G#/Ab">G#/Ab</option>
+          </select>
 
-    <aside>
-      <section id="scale-input-card">
-        <h2>Root & Mode:</h2>
-        <select id="scale-root-note" name="scale-root-note">
-          <option value="A">A</option>
-          <option value="A#/Bb">A#/Bb</option>
-          <option value="B">B</option>
-          <option value="C">C</option>
-          <option value="C#/Db">C#/Db</option>
-          <option value="D">D</option>
-          <option value="D#/Eb">D#/Eb</option>
-          <option value="E">E</option>
-          <option value="F">F</option>
-          <option value="F#/Gb">F#/Gb</option>
-          <option value="G">G</option>
-          <option value="G#/Ab">G#/Ab</option>
-        </select>
-
-        <select id="scale-root-mode" name="scale-root-mode">
-          <option value="I">Ionian</option>
-          <option value="II">Dorian</option>
-          <option value="III">Phrygian</option>
-          <option value="IV">Lydian</option>
-          <option value="V">Mixolydian</option>
-          <option value="VI">Aeolian</option>
-          <option value="VII">Locrian</option>
-        </select>
-      </section>
-    </aside>
+          <select id="scale-root-mode" name="scale-root-mode">
+            <option value="I">Ionian</option>
+            <option value="II">Dorian</option>
+            <option value="III">Phrygian</option>
+            <option value="IV">Lydian</option>
+            <option value="V">Mixolydian</option>
+            <option value="VI">Aeolian</option>
+            <option value="VII">Locrian</option>
+          </select>
+        </section>
+      </aside>
+    </section>
   </article>
 
 
