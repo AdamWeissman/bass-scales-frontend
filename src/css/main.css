@@ -34,12 +34,21 @@ nav #scales-logo > img {
 }
 
 main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #feelings-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 aside{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 select{
@@ -144,10 +153,26 @@ select{
     margin: 1vh 0;
   }
 
-  #main-block{
+  #main-block {
     display: flex;
+    justify-content: space-between;
   }
 
+  #input-cards {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  main {
+    height: 55vh;
+
+  }
+
+  aside {
+    order: -1;
+    height: 25vh;
+  }
 }
 
 @media screen and (orientation:landscape) {
