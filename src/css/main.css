@@ -46,6 +46,11 @@ main{
   align-items: start;
 }
 
+#feeling-input-form--errors {
+  list-style-type: none;
+  color: rgba(255,0,255,1);
+}
+
 aside{
   display: flex;
   flex-direction: column;
