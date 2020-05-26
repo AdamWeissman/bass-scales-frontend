@@ -22,7 +22,8 @@ body {
 }
 
 nav #scales-logo > img {
-  height: 5vw;
+  /* height: 2rem; */
+  height: calc(0.5 * (80vw / 7 - 5px));
   width: auto;
   margin-bottom: 2vw;
 }
@@ -42,7 +43,7 @@ main{
 #feelings-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
 }
 
 aside{
@@ -117,6 +118,7 @@ select{
   border-radius: 7px;
   width: calc(80vw / 7 - 5px);
   height: calc(80vw / 7 - 10px);
+  font-size: calc(0.35 * (80vw / 7 - 5px));
 }
 
 .scale-card--notes > div > span {
@@ -124,6 +126,7 @@ select{
   color: rgba(255,255,0,1);
   width: 100%;
   text-shadow: 2px 2px rgba(50,50,50,1);
+  padding-top: 1vh;
 }
 
 .scale-card--note-card{
@@ -136,8 +139,14 @@ select{
 }
 
 @media screen and (orientation:portrait) {
+  h2 {
+    font-size: 4vw;
+  }
+
+
   nav #scales-logo > img {
-    height: 9vw;
+    /* height: 9vw; */
+    height: calc(0.5 * 80vh / 7 - 1vh);
     width: auto;
     margin-bottom: 2vh;
   }
@@ -151,6 +160,7 @@ select{
     width: calc(80vh / 7 - 1vh);
     height: calc(80vh / 7 - 1vh);
     margin: 1vh 0;
+    font-size: calc(0.4 * 80vh / 7 - 1vh);
   }
 
   #main-block {
@@ -160,6 +170,7 @@ select{
 
   #input-cards {
     justify-content: space-between;
+    align-items: start;
     flex-wrap: nowrap;
     flex-direction: column;
   }
@@ -170,6 +181,7 @@ select{
   }
 
   aside {
+    align-items: start;
     order: -1;
     height: 25vh;
   }
@@ -184,8 +196,16 @@ select{
   }
 
   .scale-card--notes > div {
-    width: calc(70vw / 7 - 2vh);
-    height: calc(70vw / 7 - 2vh);
+    width: calc(70vw / 7 - 3vh);
+    height: calc(70vw / 7 - 3vh);
     margin: 2vw 0;
+    font-size: calc(0.65 * (70vh / 7 - 3.3vh));
+  }
+
+  nav #scales-logo > img {
+    /* height: 9vw; */
+    height: calc(0.5 * 80vh / 7 - 1vh);
+    width: auto;
+    margin-bottom: 2vh;
   }
 }
