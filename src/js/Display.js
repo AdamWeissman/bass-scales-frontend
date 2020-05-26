@@ -130,6 +130,7 @@ export class Display {
       this.scaleFeelings;
     }
     else{
+      this.removeElements("#feeling-input-form--errors li");
       const etag = document.getElementById("feeling-input-form--errors");
       for(const error of errors){
         const errorLi = document.createElement("li");
