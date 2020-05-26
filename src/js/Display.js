@@ -94,6 +94,7 @@ export class Display {
 
   buildScaleFeelings(feelings){
     this.removeElements("#feelings-show-card div")
+    this.removeElements("#feeling-input-form--errors li");
     const feelingsShowCard = document.getElementById("feelings-show-card");
 
     for(const feeling of feelings){
@@ -123,6 +124,21 @@ export class Display {
     }, false);
   }
 
+  updateScaleFeelings(json){
+    const errors = json.errors;
+    if (errors === false){
+      this.scaleFeelings;
+    }
+    else{
+      const etag = document.getElementById("feeling-input-form--errors");
+      for(const error of errors){
+        const errorLi = document.createElement("li");
+        errorLi.innerText = error;
+        etag.appendChild(errorLi);
+      }
+    }
+  }
+
   createScaleFeeling(feelingAdjective){
     const endpoint = `/scales/${this.scale.dbIndex}/feelings`;
     const scale_id = this.scale.dbIndex;
@@ -130,8 +146,7 @@ export class Display {
 
     this.adapter.post(endpoint, data)
       .then(json => {
-        console.log(json);
-        this.scaleFeelings;
+        this.updateScaleFeelings(json);
       });
   }
 }
