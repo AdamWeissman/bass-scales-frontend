@@ -196,8 +196,16 @@ select{
   padding-top: 1vh;
 }
 
+span.scale-card--interval-text {
+  font-size: calc(0.2 * (80vw / 7 - 5px)) !important;
+  color: rgba(0,255,255,1) !important;
+}
+
 .scale-card--note-card{
   background-image: radial-gradient(circle, black, rgba(255,0,255,0.1));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .scale-card--note-card:hover{
