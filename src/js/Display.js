@@ -40,15 +40,20 @@ export class Display {
     this.scaleNotes(scaleCard);
   }
 
-  noteCard(note){
+  noteCard(noteInterval){
     const noteCard = document.createElement("div");
     noteCard.classList.add("scale-card--note-card");
 
     const noteText = document.createElement("span");
     noteText.classList.add("scale-card--note-text");
 
-    noteText.innerText = note;
+    const intervalText = document.createElement("span");
+    intervalText.classList.add("scale-card--interval-text");
+
+    noteText.innerText = noteInterval.note;
+    intervalText.innerText = noteInterval.interval;
     noteCard.appendChild(noteText);
+    noteCard.appendChild(intervalText);
 
     return noteCard;
   }
@@ -58,8 +63,8 @@ export class Display {
     const scaleCardNotes = document.createElement('div');
     scaleCardNotes.classList.add("scale-card--notes");
 
-    this.scale.notes.map( note => {
-      scaleCardNotes.appendChild(this.noteCard(note));
+    this.scale.notesIntervals.map( noteInterval => {
+      scaleCardNotes.appendChild(this.noteCard(noteInterval));
     });
 
     scaleCard.appendChild(scaleCardNotes);
