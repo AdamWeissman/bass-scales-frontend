@@ -148,7 +148,7 @@ export class Display {
   createScaleFeeling(feelingAdjective){
     const endpoint = `/scales/${this.scale.dbIndex}/feelings`;
     const scale_id = this.scale.dbIndex;
-    const data = {"scale_id": scale_id, "feeling_adjective": feelingAdjective};
+    const data = {"scale_id": scale_id, "feeling_adjective": feelingAdjective.toLowerCase()};
 
     this.adapter.post(endpoint, data)
       .then(json => {
