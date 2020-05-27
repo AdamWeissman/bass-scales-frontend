@@ -51,11 +51,15 @@ main{
   color: rgba(255,0,255,1);
 }
 
+#feeling-input-card {
+  margin-bottom: 30px;
+}
+
 #feelings-show-card {
   display: flex;
   flex-wrap: wrap;
   align-items: start;
-  margin-top: 40px;
+  margin-top: 15px;
 }
 
 #feelings-show-card > div {
