@@ -51,6 +51,28 @@ main{
   color: rgba(255,0,255,1);
 }
 
+#feelings-show-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  margin-top: 20px;
+}
+
+#feelings-show-card > div {
+  padding: 3px 10px;
+  margin: 0px 10px 12px 0px;
+  background-color: rgba(0,0,0,1);
+  color: rgba(0,255,255,1);
+  border-radius: 3px;
+  border-color: rgba(0,255,255,1);
+  border-style: solid;
+  border-width: 2px;
+}
+
+#feeling-show-card:nth-child(1){
+  margin-left: 0;
+}
+
 aside{
   display: flex;
   flex-direction: column;
