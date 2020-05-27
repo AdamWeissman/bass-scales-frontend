@@ -112,6 +112,21 @@ export class Scale {
     return interval;
   }
 
+  get notesIntervals() {
+    const notes = this.notes;
+    const intervals = this.intervals;
+
+    const notesIntervals = [];
+
+    for(let i = 0; i < notes.length; i++){
+      notesIntervals.push(
+        {"note": notes[i], "interval": intervals[i]}
+      );
+    }
+
+    return notesIntervals;
+  }
+
   get modeInfo(){
     return `This is the ${this._root} ${this.modeName} scale of the ${this.parentKeyNotes[0]} major scale.`;
   }
