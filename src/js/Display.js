@@ -101,6 +101,9 @@ export class Display {
     this.removeElements("#feelings-show-card div")
     this.removeElements("#feeling-input-form--errors li");
     const feelingsShowCard = document.getElementById("feelings-show-card");
+    feelings.sort( (a,b) => {
+      return (a.adjective < b.adjective) ? -1 : 1;
+    });
 
     for(const feeling of feelings){
       const feelingDiv = document.createElement('div');
@@ -147,8 +150,8 @@ export class Display {
 
   createScaleFeeling(feelingAdjective){
     const endpoint = `/scales/${this.scale.dbIndex}/feelings`;
-    const scale_id = this.scale.dbIndex;
-    const data = {"scale_id": scale_id, "feeling_adjective": feelingAdjective.toLowerCase()};
+    const scaleId = this.scale.dbIndex;
+    const data = {"scale_id": scaleId, "feeling_adjective": feelingAdjective.toLowerCase()};
 
     this.adapter.post(endpoint, data)
       .then(json => {
